@@ -90,3 +90,41 @@ r = int(input())
 print('%.3f'%(pi*r**2))
 print('%.3f'%(2*pi*r))
 
+8
+
+a, n, = float(input()), int(input()) 
+ 
+def power(a,n): 
+ z, c, rez, arr = 0, 1, 0, [] 
+ while c < n: 
+ if n < 3: 
+ arr.append(a * a) 
+ rez += arr[z] 
+ else: 
+ if c < 2: 
+ arr.append(a * a) 
+ rez += arr[z] 
+ else: 
+ arr.append(a) 
+ rez *= arr[z] 
+ c += 1 
+ z += 1 
+ return rez 
+ 
+print ("power(a,n)", power(a,n))
+
+9
+
+a = float(input('введите а '))
+b = a*a
+c = b*b
+e = c*c
+g = e*b
+print ( '{:5.3f}'.format(g) )
+
+11
+
+from random import randint
+
+a, b = map(int, input().split())
+print(*(randint(a, b + 1) for _ in range(3)))
